@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: nikola
+Build-Jdk: 15.0.2
+Implementation-Title: Esercizio 1 Introduzione ai big data
+Implementation-Version: 0.0.1
+Implementation-Vendor-Id: Esercizio1
+Implementation-Vendor: Pivotal Software, Inc.
+Created-By: Maven Integration for Eclipse
+
