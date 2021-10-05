@@ -34,6 +34,4 @@ public class Reduce_Es_2_part2 extends Reducer<Object, Object, Object, Object> {
 		
 	}
 	
-	
-
 }

@@ -45,13 +45,13 @@ public class Reduce_Es1_part2 extends Reducer<Object, Object, Object, Object> im
 			resultLineMapList = listLineMap.subList(0, 5);
 		}
 
-		Text dateText = new Text(arg0.toString()+";");
+		Text dateText = new Text(arg0.toString());
 		String resultString = "";
 		for (LineMap result : resultLineMapList) {
 			// result
 			// example
 			// 2015-01: pane 852, latte 753, carne 544, vino 501, pesce 488
-			resultString = resultString + result.getProduct() +";"+  Separator.SPACE +String.valueOf(result.getIntValue()) +";"+  Separator.SPACE;
+			resultString = resultString + result.getProduct() +  Separator.SPACE +String.valueOf(result.getIntValue()) +  Separator.SPACE;
 		}
 
 		if (!resultString.equalsIgnoreCase("")) {
