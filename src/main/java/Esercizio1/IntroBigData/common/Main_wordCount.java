@@ -1,5 +1,7 @@
 package Esercizio1.IntroBigData.common;
 
+import java.util.Date;
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.Path;
@@ -23,8 +25,12 @@ public class Main_wordCount extends Configured implements Tool{
 
 		int res_job1;
 		try {
+			Date startTime = new Date();
 			System.out.println("Start job word count --------->");
 			res_job1 = ToolRunner.run(new Configuration(), new Main_wordCount(), args);
+			Date endTime = new Date();
+			long timeDone = (endTime.getTime() - startTime.getTime());
+			System.out.println("Word count done in  ---------> " + timeDone + "seconds");
 			System.exit(res_job1);
 		} catch (Exception e) {
 			e.printStackTrace();
