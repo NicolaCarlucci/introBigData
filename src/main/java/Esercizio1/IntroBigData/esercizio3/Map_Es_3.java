@@ -129,7 +129,7 @@ public class Map_Es_3 extends Mapper<LongWritable, Text, Text, Text> {
 	 * @param couple          couple to check rule
 	 * @param separatorString
 	 * @return null or supportAssociation:0;confidentAssociation:0 or
-	 *         upportAssociation:0;confidentAssociation:1
+	 *         supportAssociation:0;confidentAssociation:1
 	 */
 	private String confidentAssociation(String linString, String couple, String separatorString) {
 		try {

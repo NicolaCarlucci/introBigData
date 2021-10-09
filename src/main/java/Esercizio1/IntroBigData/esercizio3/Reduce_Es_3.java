@@ -12,7 +12,7 @@ import generics.Separator;
 /**
  * Reduce Class job 3
  * 
- * @author nikola
+ * @author Nicola Carlucci
  *
  */
 public class Reduce_Es_3 extends Reducer<Text, IntWritable, Text, Text> {
