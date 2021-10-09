@@ -1,0 +1,12 @@
+start-dfs.sh
+start-yarn.sh
+
+hadoop fs -ls
+
+
+install.packages("rhdfs")
+install.packages("rmr2")
+
+library(rhdfs)
+library(rmr2)
+hdfs.init()
