@@ -59,7 +59,7 @@ public class Main_Es_3 extends Configured implements Tool {
 			FileInputFormat.addInputPath(job,
 					new Path("/home/nikola/Scrivania/workspaceIntroBigData/IntroBigData/src/data/input/food.txt"));
 			FileOutputFormat.setOutputPath(job,
-					new Path("/home/nikola/Scrivania/workspaceIntroBigData/IntroBigData/src/data/output/Esercizio3/"
+					new Path("/home/nikola/Scrivania/workspaceIntroBigData/IntroBigData/src/data/output/Esercizio1/job3/"
 							+ tempName + "/Es_3_" + tempName + ".txt"));
 
 			job.setOutputKeyClass(Text.class);

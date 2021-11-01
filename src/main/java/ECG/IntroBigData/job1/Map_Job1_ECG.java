@@ -37,12 +37,12 @@ public class Map_Job1_ECG extends Mapper<LongWritable, Text, Text, Text>{
 		}
 		*/
 		// per il grafici
-		if(ecgValue.getVolt() >= 0.85) {
+		if(ecgValue.getVolt() >= 0.75) {
 			double[] valueArray = values.stream().mapToDouble(Double::doubleValue).toArray(); //via method reference
 			CalculationsResult calculationsResult = implUtilityECGValues.calculateCalculationsResult(valueArray);
 			if(calculationsResult!=null) {
 				Text timeText = new Text(String.valueOf(ecgValue.getTime()));
-				Text standardDeviationText = new Text("standarDeviation"+ Separator.COMMA + String.valueOf(calculationsResult.getStandardDeviation())+ "valueVolt"+Separator.COMMA + String.valueOf(ecgValue.getVolt()));
+				Text standardDeviationText = new Text("standarDeviation"+ Separator.COMMA + String.valueOf(calculationsResult.getStandardDeviation())+  Separator.COMMA +"valueVolt"+Separator.COMMA + String.valueOf(ecgValue.getVolt()) +  Separator.COMMA +"average"+Separator.COMMA + String.valueOf(calculationsResult.getAverage()));
 				context.write(timeText, standardDeviationText);
 
 			}

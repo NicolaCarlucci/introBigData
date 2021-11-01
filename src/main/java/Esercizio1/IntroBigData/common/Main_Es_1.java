@@ -62,7 +62,7 @@ public class Main_Es_1 extends Configured implements Tool {
 			FileInputFormat.addInputPath(job,
 					new Path("/home/nikola/Scrivania/workspaceIntroBigData/IntroBigData/src/data/input/food.txt"));
 			FileOutputFormat.setOutputPath(job,
-					new Path("/home/nikola/Scrivania/workspaceIntroBigData/IntroBigData/src/data/output/Esercizio1/"
+					new Path("/home/nikola/Scrivania/workspaceIntroBigData/IntroBigData/src/data/output/Esercizio1/job1/"
 							+ tempName + "/Es_1_output_temp_" + tempName + ".txt"));
 
 			job.setOutputKeyClass(Text.class);
@@ -78,10 +78,10 @@ public class Main_Es_1 extends Configured implements Tool {
 				Job job2 = new Job(configuration, "job1_part2");
 
 				FileInputFormat.setInputPaths(job2,
-						new Path("/home/nikola/Scrivania/workspaceIntroBigData/IntroBigData/src/data/output/Esercizio1/" + tempName
+						new Path("/home/nikola/Scrivania/workspaceIntroBigData/IntroBigData/src/data/output/Esercizio1/job1/" + tempName
 								+ "/Es_1_output_temp_" + tempName + ".txt"));
 				FileOutputFormat.setOutputPath(job2,
-						new Path("/home/nikola/Scrivania/workspaceIntroBigData/IntroBigData/src/data/output/Esercizio1/"
+						new Path("/home/nikola/Scrivania/workspaceIntroBigData/IntroBigData/src/data/output/Esercizio1/job1/"
 								+ tempName + "/Es_1_output_" + tempName + ".txt"));
 
 				// job2.setJarByClass(Job2Main.class);
