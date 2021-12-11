@@ -23,7 +23,7 @@ public class Map_Job1_ECG extends Mapper<LongWritable, Text, Text, Text>{
 			throws IOException, InterruptedException {
 		ECGValue ecgValue = getECGValue(value.toString(), Separator.COMMA);
 		values.add(ecgValue.getVolt());
-		/*
+		
 		if(ecgValue.getVolt() >= 0.95) {
 			double[] valueArray = values.stream().mapToDouble(Double::doubleValue).toArray(); //via method reference
 			CalculationsResult calculationsResult = implUtilityECGValues.calculateCalculationsResult(valueArray);
@@ -35,8 +35,8 @@ public class Map_Job1_ECG extends Mapper<LongWritable, Text, Text, Text>{
 			}
 			
 		}
-		*/
-		// per il grafici
+		/*
+		// per i grafici
 		if(ecgValue.getVolt() >= 0.75) {
 			double[] valueArray = values.stream().mapToDouble(Double::doubleValue).toArray(); //via method reference
 			CalculationsResult calculationsResult = implUtilityECGValues.calculateCalculationsResult(valueArray);
@@ -47,7 +47,7 @@ public class Map_Job1_ECG extends Mapper<LongWritable, Text, Text, Text>{
 
 			}
 			
-		}
+		}*/
 		
 	}
 
